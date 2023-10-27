@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Scroll Reactive Portfolio - GFG</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="image/myresume.png" class="logo" size="40">
+                    <ul>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <h1>Hello Everyone!</h1>
+                    <br>
+                    <h3>This is Harshit Saxena.</h3>
+                    <br>
+                    <br>
+                </div>
+            </div>   
+            <div id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="about-col-1">
+                            <img src="image/background.jpg.jpg" width="400" height="400">
+                        </div>
+                        <div class="about-col-2">
+                            <h1 class="color">About Me</h1>
+                            <br>
+  <p class="change">I'm a sophomore pursuing my bachelors 
+                    in Computer Science from SRM Institute of 
+                    Science and Technology. I'm a tech geek and
+                    enjoy coding. I'm inclined towards honing my
+                    front end development skills and I also show
+                    keen interest in data structures and algorithms.
+                    I possess sheer determination towards achieving
+                    various goals and always put in a lot of efforts to
+                    accomplish diverse milestones.
+    </p>
+    <div class="tab-titles">
+        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+        <p class="tab-links active-link" onclick="opentab('Projects')">Projects</p>
+        <p class="tab-links active-link" onclick="opentab('Education')">Education</p>
+    </div>
+    <div class="tab-contents active-tab" id="Skills">
+        <ul>
+            <li><span>Languages</span></li>
+            <li>C</li>
+            <li>C++</li>
+            <li>Python</li>
+            <li>HTML</li>
+            <li>CSS</li><br>
+            <li><span>Extra Curricular</span></li>
+            <li>Analytical Skills</li>
+            <li>Problem Solving</li>
+            <li>Poetry</li>
+            <li>Article Writing</li><br>
+        </ul>
+    </div>
+    <div class="tab-contents active-tab" id="Projects">
+        <ul>
+            <li><span>Technical</span></li>
+            <li>SQL Project: 2019-2020</li>
+            <li>Python Project: 2020-2021</li>
+            <li>Movie Recommendation Algortihm in Python: 2023-2024</li>
+            <li>Currency Converter in Java: 2023-2024</li><br>
+        </ul>
+    </div>
+    <div>
+    <div class="tab-contents active-tab" id="Education">
+        <ul>
+        <li><span>Graduation</span></li>
+        <li>Computer Science Engineering- SRMIST: 2022-2026</li><br>
+        <li><span>Class XII</span></li>
+        <li>Vivekanand School: 2021-2022</li><br>
+        <li><span>Class X</span></li>
+        <li>Vivekanand School: 2019-2020</li>
+    </ul>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact Me</h1><br><br>
+                <p>Email: harshitsaxena3007@gmail.com</p><br>
+                <p>Phone: +918376977033</p><br>
+                <a href="https://www.linkedin.com/in/harshit-saxena-562305294/">LinkedIn Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+             tablink.classlist.remove("active-link");
+            }
+        for(tabcontent of tabcontents){
+                tabcontent.classlist.remove("active-tab");
+            }
+        event.currentTarget.classlist.add("active-link");
+        document.getElementById(tabname).classlist.add("active-tab");
+        }
+</script>
+    </body>
