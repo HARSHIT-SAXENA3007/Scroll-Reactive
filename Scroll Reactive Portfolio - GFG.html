@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://127.0.0.1:5500/Harshit.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Scroll Reactive Portfolio - GFG</title>
+        <link rel="stylesheet" href="./Scroll Reactive Portfolio - GFG_files/style.css">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="./Scroll Reactive Portfolio - GFG_files/myresume.png" class="logo" size="40">
+                    <ul>
+                        <li><a href="http://127.0.0.1:5500/Harshit.html#header">Home</a></li>
+                        <li><a href="http://127.0.0.1:5500/Harshit.html#about">About</a></li>
+                        <li><a href="http://127.0.0.1:5500/Harshit.html#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <h1>Hello Everyone!</h1>
+                    <br>
+                    <h3>This is Harshit Saxena.</h3>
+                    <br>
+                    <br>
+                </div>
+            </div>   
+            <div id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="about-col-1">
+                            <img src="./Scroll Reactive Portfolio - GFG_files/background.jpg.jpg" width="400" height="400">
+                        </div>
+                        <div class="about-col-2">
+                            <h1 class="color">About Me</h1>
+                            <br>
+  <p class="change">I'm a sophomore pursuing my bachelors 
+                    in Computer Science from SRM Institute of 
+                    Science and Technology. I'm a tech geek and
+                    enjoy coding. I'm inclined towards honing my
+                    front end development skills and I also show
+                    keen interest in data structures and algorithms.
+                    I possess sheer determination towards achieving
+                    various goals and always put in a lot of efforts to
+                    accomplish diverse milestones.
+    </p>
+    <div class="tab-titles">
+        <p class="tab-links active-link" onclick="opentab(&#39;Skills&#39;)">Skills</p>
+        <p class="tab-links active-link" onclick="opentab(&#39;Projects&#39;)">Projects</p>
+        <p class="tab-links active-link" onclick="opentab(&#39;Education&#39;)">Education</p>
+    </div>
+    <div class="tab-contents active-tab" id="Skills">
+        <ul>
+            <li><span>Languages</span></li>
+            <li>C</li>
+            <li>C++</li>
+            <li>Python</li>
+            <li>HTML</li>
+            <li>CSS</li><br>
+            <li><span>Extra Curricular</span></li>
+            <li>Analytical Skills</li>
+            <li>Problem Solving</li>
+            <li>Poetry</li>
+            <li>Article Writing</li><br>
+        </ul>
+    </div>
+    <div class="tab-contents active-tab" id="Projects">
+        <ul>
+            <li><span>Technical</span></li>
+            <li>SQL Project: 2019-2020</li>
+            <li>Python Project: 2020-2021</li>
+            <li>Movie Recommendation Algortihm in Python: 2023-2024</li>
+            <li>Currency Converter in Java: 2023-2024</li><br>
+        </ul>
+    </div>
+    <div>
+    <div class="tab-contents active-tab" id="Education">
+        <ul>
+        <li><span>Graduation</span></li>
+        <li>Computer Science Engineering- SRMIST: 2022-2026</li><br>
+        <li><span>Class XII</span></li>
+        <li>Vivekanand School: 2021-2022</li><br>
+        <li><span>Class X</span></li>
+        <li>Vivekanand School: 2019-2020</li>
+    </ul>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact Me</h1><br><br>
+                <p>Email: harshitsaxena3007@gmail.com</p><br>
+                <p>Phone: +918376977033</p><br>
+                <a href="https://www.linkedin.com/in/harshit-saxena-562305294/">LinkedIn Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+             tablink.classlist.remove("active-link");
+            }
+        for(tabcontent of tabcontents){
+                tabcontent.classlist.remove("active-tab");
+            }
+        event.currentTarget.classlist.add("active-link");
+        document.getElementById(tabname).classlist.add("active-tab");
+        }
+</script>
+    <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</div></body></html>
